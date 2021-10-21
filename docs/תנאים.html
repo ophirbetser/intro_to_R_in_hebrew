@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 תנאים | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <title> 4 תנאים | YOUR TITLE HERE</title>
+  <meta name="description" content=" 4 תנאים | YOUR TITLE HERE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <meta property="og:title" content=" 4 תנאים | YOUR TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <meta name="twitter:title" content=" 4 תנאים | YOUR TITLE HERE" />
   
   
   
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">מבוא לתכונת בשפת R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Down the rabbit-hole</a></li>
@@ -195,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="ספריות.html"><a href="ספריות.html#pacman"><i class="fa fa-check"></i><b>7.4</b> pacman</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li style="text-align:left;"><a href="https://ophirbetser.netlify.app/" target="blank">ophir betser</a></li>
 </ul>
 
       </nav>
@@ -214,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="תנאים" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> תנאים</h1>
+<h1><span class="header-section-number"> 4</span> תנאים</h1>
 <p>לעיתים קרובות אנחנו רוצים לשאול את המחשב שאלות. למשל, נרצה לפעמים לקבל תובה של כן או לא על שאלות כמו האם המספר הזה זוגי? האם המחרוזת שלי באורך של 4 תווים?</p>
 <p>הדרך לעשות זאת בשפות תכנות באופן כללי, וגם בשפת
 R
@@ -321,8 +321,7 @@ R
 <p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="תנאים.html#cb72-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
 <span id="cb72-2"><a href="תנאים.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
-<pre><code>##  [1]  14  69  87  53  99  84  80  52   7 100  61  92
-## [13]  58  44  11  43  60  30  78  22</code></pre>
+<pre><code>##  [1]  73  94  67  68  17  42  59  51  86  62  57  41  52  20  38   2  56  22  90 100</code></pre>
 <p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
 <code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="תנאים.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
@@ -333,10 +332,9 @@ R
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="תנאים.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb75-2"><a href="תנאים.html#cb75-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
 <span id="cb75-3"><a href="תנאים.html#cb75-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;why???&quot;
-##  [6] &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;  
-## [11] &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot;
-## [16] &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;</code></pre>
+<pre><code>##  [1] &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;  
+## [10] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;  
+## [19] &quot;good&quot;   &quot;good&quot;</code></pre>
 <p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
 
 </div>
