@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>YOUR TITLE HERE</title>
-  <meta name="description" content="YOUR TITLE HERE" />
+  <title>Chapter 7 ספריות | YOUR TITLE HERE</title>
+  <meta name="description" content="Chapter 7 ספריות | YOUR TITLE HERE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 7 ספריות | YOUR TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 7 ספריות | YOUR TITLE HERE" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="פונקציות.html"/>
 
-<link rel="next" href="the-pool-of-tears.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -190,22 +190,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">YOUR TITLE HERE</h1>
-<p class="author"><em>YOUR NAME HERE</em></p>
-<p class="date"><em>2021-10-21</em></p>
+<div id="ספריות" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> ספריות</h1>
+<p>ספריות, או באנגילת
+packages
+הן קבצים שאחנו יכולים להוריד וכך להוסיף פונקציות שימושיות לסביבת ה
+R
+שלנו, והרחיב את היקף הדברים שאנחנו יכולים לעשות בה.</p>
+<p>שפת
+R
+היא ״שפת קוד פתוח״
+והמשמעות של זה היא שהתוכנה אינה שייכת לחברה מסחרית אחת, אלא היא נוצרה ומתוחזקת על ידי קהילת המשתמשים בה.
+בתור אחת משפות התכנות הפופולאריות ביותר בעולם, יש ל
+R
+מיליוני משתמשים אשר תורמים לפיתוח שלה. כתיבת ספריות קוד היא אחת מהדרכים הכי שכיחות של תרומה כזאת. כל משתמש יכול לכתוב ספריה שתכיל את הפונקציות שלו, ולשתף אותן ברחבי האינטרנט למשתמשים אחרים. כך שהרבה פעמים, כאשר נמצא את עצמנו מעוניינים לבצע פעולה מסובכת, נגלה שמישהו כבר פתור אותה, כתב את הפתרון בתור פונקציה בספרייה, ושיתף אותה איתנו, וכל שנותר לנו הוא להוריד את הספריה למחשב שלנו.</p>
+<div id="איך-להוריד-ולטעון-ספריות" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> איך להוריד ולטעון ספריות</h2>
+<p>להוריד ספריות זה ממש קל!</p>
 </div>
-<div id="down-the-rabbit-hole" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Down the rabbit-hole</h1>
+<div id="base-r" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> base-r</h2>
+<p>נניח ואני רוצה להוריד את הספריה
+<code>ggplot2</code>
+שהיא ספריה מדהימה ליצרית ויזואליזציות.</p>
+<p>כל שעלי לעשות הוא להשתמש בפונקציה
+<code>install.packages</code>
+ולהזין למה את שם הספריה שאני מעוניין להוריד בתור מרכאות</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="ספריות.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<p>הרצת שורת הקוד הזאת תפנה לדף האינטרנט שבו מאוחסן הקוד של הספריה, ותוריד אותו למחשב האישי שלכם.</p>
+<p>כעת, בכל פעם שארצה להשתמש בספרייה הזאת, יהיו עלי להשתמש בפקודה
+<code>library</code>
+שתקבל את שם הספריה שאותה אני רוצה לטעון, אך הפעם ללא מרכאות.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="ספריות.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p>אפשר לחשוב על ההורדה של הספריה בתור קניית מצרכים מהסופר ואחסונם במזווה שלנו, ובטעינה של הספריה, הוצאה של המצרכים מהמזווה כדי להתחיל להכין איתם מנה מדהימה, או קוד אדיר!</p>
+</div>
+<div id="מבט-על-כל-הפונקציות-שיש-בכל-ספריה" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> מבט על כל הפונקציות שיש בכל ספריה</h2>
+<p>כדי לראות את כל הפונקציות שכל ספריה מציעה,
+נרשום את שם הספריה, ונוסיף
+<code>::</code>
+ואז תופיע לנו רשימה של הפונקציות שהספריה מכילה</p>
+<p><img src="07-packages_insertimage_1.png" /></p>
+</div>
+<div id="pacman" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> pacman</h2>
+<p>דרך מעט נוחה יותר בעיני לעשות זאת היא להשתמש במנהל ספריות. הספריה של
+R
+<code>pacman</code>
+תאפשר לנו להוריד ולטעון ספריות בפקודה אחת, ובאופן יותר קריא.</p>
+<p>נתחיל קודם כל בלהוריד את הספריה</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="ספריות.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span></code></pre></div>
+<p>כעת, נעשה שימוש בפקודה
+<code>p_load</code>
+כדי להוריד ולטעון את הספריות שאנחנו מעוניינים בהם. אם ספריה הורדה בעבר למחשב שלנו,
+pacman
+רק תטען אותה,
+ואם היא אינה הורדה בעבר למחשב שלנו
+היא גם תורד וגם תטען בפקודה אחת</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="ספריות.html#cb38-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
+<span id="cb38-2"><a href="ספריות.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  ggplot2,</span>
+<span id="cb38-3"><a href="ספריות.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  data.table,</span>
+<span id="cb38-4"><a href="ספריות.html#cb38-4" aria-hidden="true" tabindex="-1"></a>  DT,</span>
+<span id="cb38-5"><a href="ספריות.html#cb38-5" aria-hidden="true" tabindex="-1"></a>  lubridate</span>
+<span id="cb38-6"><a href="ספריות.html#cb38-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="פונקציות.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="the-pool-of-tears.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -236,7 +293,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/index.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/07-packages.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -244,7 +301,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/index.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/07-packages.Rmd",
 "text": null
 },
 "download": null,

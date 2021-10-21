@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>YOUR TITLE HERE</title>
-  <meta name="description" content="YOUR TITLE HERE" />
+  <title>Chapter 5 לולאות | YOUR TITLE HERE</title>
+  <meta name="description" content="Chapter 5 לולאות | YOUR TITLE HERE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 5 לולאות | YOUR TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 5 לולאות | YOUR TITLE HERE" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="the-pool-of-tears.html"/>
+<link rel="prev" href="תנאים.html"/>
+<link rel="next" href="פונקציות.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -190,22 +190,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">YOUR TITLE HERE</h1>
-<p class="author"><em>YOUR NAME HERE</em></p>
-<p class="date"><em>2021-10-21</em></p>
+<div id="לולאות" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> לולאות</h1>
+<p>בשונה משפות תכנות רבות אחרות,
+R
+היא שפה וקטורית,
+כלומר רוב הפעולות והפונקציות הבסיסיות בה מוכוונות לעבודה עם מערכים, או וקטורים מראש. העובדה ש
+R
+היא שפה וקטורית מורידה משמעותית את התלות שלנו בשימוש בלולאות, אך לעיתים עדיין אנו נרצה להשתמש בהם.</p>
+<p>ללואות הן דרך לומר למחשב לבצע מספר רב של פעמיים פעולה דומה, ללא צורך בלכתוב קוד נפרד לכל פעולה. ישנם מספר סוגי לולאות, העיקריות הן לולאות
+<code>for</code>
+אשר ישמשו אותנו לביצוע פעולה חזרתית מספר ידוע של פעמיים,
+ולולאות
+<code>while</code>
+אשר יבצעו עוד ועוד חזרות, עד אשר תנאי שנגדיר יתקיים.</p>
+<div id="for-loops" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> for loops</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="לולאות.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb16-2"><a href="לולאות.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb16-3"><a href="לולאות.html#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
 </div>
-<div id="down-the-rabbit-hole" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Down the rabbit-hole</h1>
+<div id="while" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> while</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="לולאות.html#cb18-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb18-2"><a href="לולאות.html#cb18-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb18-3"><a href="לולאות.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(i <span class="sc">&lt;</span> n){</span>
+<span id="cb18-4"><a href="לולאות.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb18-5"><a href="לולאות.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb18-6"><a href="לולאות.html#cb18-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9</code></pre>
+</div>
+<div id="apply" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> apply</h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="לולאות.html#cb20-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">4</span>)</span>
+<span id="cb20-2"><a href="לולאות.html#cb20-2" aria-hidden="true" tabindex="-1"></a>matrix</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    7   13   19
+## [2,]    2    8   14   20
+## [3,]    3    9   15   21
+## [4,]    4   10   16   22
+## [5,]    5   11   17   23
+## [6,]    6   12   18   24</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="לולאות.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">1</span>, sum)</span></code></pre></div>
+<pre><code>## [1] 40 44 48 52 56 60</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="לולאות.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">2</span>, sum)</span></code></pre></div>
+<pre><code>## [1]  21  57  93 129</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="the-pool-of-tears.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="תנאים.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="פונקציות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -236,7 +293,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/index.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/05-loops.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -244,7 +301,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/index.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/05-loops.Rmd",
 "text": null
 },
 "download": null,
