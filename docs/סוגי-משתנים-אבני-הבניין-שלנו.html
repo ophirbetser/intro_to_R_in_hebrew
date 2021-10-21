@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 תנאים | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <title>Chapter 3 סוגי משתנים: אבני הבניין שלנו | YOUR TITLE HERE</title>
+  <meta name="description" content="Chapter 3 סוגי משתנים: אבני הבניין שלנו | YOUR TITLE HERE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 3 סוגי משתנים: אבני הבניין שלנו | YOUR TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 תנאים | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 3 סוגי משתנים: אבני הבניין שלנו | YOUR TITLE HERE" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="סוגי-משתנים-אבני-הבניין-שלנו.html"/>
-<link rel="next" href="לולאות.html"/>
+<link rel="prev" href="שימוש-ב-r-בתור-מחשבון.html"/>
+<link rel="next" href="תנאים.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -213,133 +213,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="תנאים" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> תנאים</h1>
-<p>לעיתים קרובות אנחנו רוצים לשאול את המחשב שאלות. למשל, נרצה לפעמים לקבל תובה של כן או לא על שאלות כמו האם המספר הזה זוגי? האם המחרוזת שלי באורך של 4 תווים?</p>
-<p>הדרך לעשות זאת בשפות תכנות באופן כללי, וגם בשפת
+<div id="סוגי-משתנים-אבני-הבניין-שלנו" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> סוגי משתנים: אבני הבניין שלנו</h1>
+<div id="משתנים" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> משתנים??</h2>
+<p>יש מספר משפחות של שפות תכנות. אחת מהמשפחות הכי שחיכות נקראת ״תכנות מונחה עצמים״. למשל,
+השפות
+Java
+ו
+Python
+כתובות בסגנון של תכנות מונחה עצמיים, וכך גם
+R.</p>
+<p>לעניינו, לא חשוב לעומק מה המשמעות של הדבר הזה,
+אך כן חשוב לדעת שכל פונקציה, משתנה או אוביקט ב
 R
-בפרט היא בעזרת שאילתות של
-if else.
-שאילתה כזאת תקבל איזה פסוק לוגי, שיכול לקבל ערך של או אמת או שקר, ואנו נפרט לה מה להחזיר עבור אמת ומה להחזיר עבור שקר. בואו נראה דוגמא.</p>
-<div id="יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> יש! אנחנו יכולים לשאול את המחשב שאלות</h2>
-<p>נניח ויש לי מספר,
-x,
-שמכיל רנדומלי ערך מסויים, נגיד 5.</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="תנאים.html#cb62-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div>
-<p>אני יכול לבקש מהמחשב להדפיס האם הערך של
-x
-הוא זוגי או אי זוגי. ראשית אראה איך לכתוב את הפסוק הלוגי שיענה לי על השאלה הזאת. עבור כך אני אעשה שימוש באופרטור ״מודולו״ שכותבים אותו ב
+יהיה שייך לאיזו מחלקה, שיש לה מאפיינים שיחודים לה.</p>
+<!-- TODO להוסיף קישור לסרטון שמסביר יותר על מה זה תכנות מונחה עצמים -->
+<p>לדוגמא, אפשר לחבר אוביקט מספרי לאוביקט מספרי אחר, אך אין משמעות לחיבור של אוביקט מספרי ומחרוזת. כדי לברר לאיזה
+מחלקה כל אוביקט משוייך, אנחנו יכולים להשתמש בפונקציה
+<code>class</code></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;1&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>אכתוב עכשיו על סוגי המשתנים הבסיסים ביותר שיש בשפת
 R
-כך
-<code>%%</code>.
-את הביטוי
-<code>11 %% 3</code>
-נקרא באופן הבא:
-11 מודלו שלוש,
-והמשמעות המתמטית של הביטוי היא
-מהי שארית החלוקה במספרים שלמים של 11
-חלקי 3.
-התשובה לכך היא 2.</p>
-<p>באופן תכנותי ב
+אשר ישמשו בתור אבני הבסיס של כל פרויקט שנרצה לבנות.</p>
+<li style="margin-left: 5px;">
+<strong>intenger &amp; numeric:</strong> משתנים מספרים, ההבדל בין השתיים הוא יחס לשינויים אחרי הנקודה העשרונית
+</li>
+<li style="margin-left: 5px;">
+<strong>logical:</strong> משתנה שמקבלים ערך של או אמת או שקר
+</li>
+<li style="margin-left: 5px;">
+<strong>character:</strong> מילים או אותיות, אנחנו נקרא למשתנים כאלה ״מחרוזות״
+</li>
+</div>
+<div id="integer" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> integer</h2>
+<p>משנה זה יכיל ערכים של מספרים שלמים. הסיבה שיש הפרדה בין סוג המחלקה של מסרים שלמים ומספרים עם נקודה עשרונית, היא שניתן לשמור בזכרון של המחשב מספרים שלמים באופן יעיל יותר, לכן, אם האוביקט שלנו מכיל מספרים שלמים בלבד עדיף למחשב לשמור אותו כך. מספרים שלמים יכולים להיות מוצגים כך <code>5</code> או כך
+<code>5L</code>.</p>
+<p>על מספרים שלמים אפשר לבצע פעולות חשבוניות, בדומה לאלו שהצגנו בפרק על שימוש ב
 R
-אכתוב את השאלה הזאת כך</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="תנאים.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="sc">%%</span> <span class="dv">3</span></span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<p>מעולה!
-נחזור לעניינו, אני רוצה לברר האם המספר שלי
-x
-הוא זוגי או אי-זוגי.
-עבור כל מספר זוגי, שארית החלוקה ב 2 היא 0,
-ועבור כל מספר אי-זוגי שארית החלוקה ב 2 היא 1.</p>
-<p>לכך כדי לקבל תשובה של אמת או שקר על האם
-x
-הוא זוגי אכתוב ב
-R</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="תנאים.html#cb65-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span></code></pre></div>
+בתור מחשבון.
+אך יש לשים לב שאם נבצע פעולה שתשנה את וקטור המספרים השלמים שלנו למספרים שיש להם מקודה עשרונית - סוג המשתנה ישונה גם הוא</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb48-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 9L, 9L, 6L)</span>
+<span id="cb48-2"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(v)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(v <span class="sc">/</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.5 4.5 4.5 3.0</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(v <span class="sc">/</span> <span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+</div>
+<div id="numeric" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> numeric</h2>
+<p>זה סוג המשתנה שכנראה תעבדו איתו הכי הרבה. על וקטורי
+numeric
+אפשר לעשות פעולות חשבוניות מגוונות, כפי שהדגמנו בפרק הקודם.</p>
+</div>
+<div id="logical" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> logical</h2>
+<p>משתנים אלו מקבלים ערכים של אמת או של שקר. הם ישמשו אותנו הרבה פעמים בתור סוג של כפתור, או מתג, אשר יעזור לנו לחלק קבוצה לשתי קבוצות, ביחס לקיום של תנאי שנגדיר.
+שם נוסף שנשתמש בו למשתנים האלו יהיה משתנים בוליאנים.</p>
+<p>הערכים היחידם שמשתנים בוליאנים יכולים לקבל הם
+<code>TRUE</code>
+ו-
+<code>FALSE</code></p>
+<div id="טבלאות-אמת" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> טבלאות אמת</h3>
+<p>בלה בלה בלה</p>
+</div>
+<div id="all" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> all</h3>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,F,T))</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<p>זה התנאי ששאילתת ה
-ifelse
-שלנו תקבל.</p>
-<p>המבנה של שאילתת
-ifelse
-נראה כך:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="תנאים.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;פסוק לוגי שיכול לקבל ערך של אמת או שקר&quot;</span>){</span>
-<span id="cb67-2"><a href="תנאים.html#cb67-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;פקודות של מה שיקרה אם הפסוק הוא פסוק אמת&quot;</span></span>
-<span id="cb67-3"><a href="תנאים.html#cb67-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb67-4"><a href="תנאים.html#cb67-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;פקודות של מה יקרה אם הפסוק הוא פסוק שקר&quot;</span></span>
-<span id="cb67-5"><a href="תנאים.html#cb67-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>נראה דוגמא:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="תנאים.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
-<span id="cb68-2"><a href="תנאים.html#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;wow, x is even!&quot;</span>)</span>
-<span id="cb68-3"><a href="תנאים.html#cb68-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb68-4"><a href="תנאים.html#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;look, x is odd!&quot;</span>)</span>
-<span id="cb68-5"><a href="תנאים.html#cb68-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;look, x is odd!&quot;</code></pre>
-<p>בגלל שערך של
-x
-הוא 5,
-x
-הוא אי-זוגי,
-התנאי בשאילתה קיבל ערך
-<code>FALSE</code>
-ולכן רצו רק הפקודות בתוך הסוגריים המסולסלים של ה
-<code>else</code>
-ולא רצו כלל הפקודות בתוך הסוגריים המסולסלים של ה
-<code>if</code></p>
-<p>מגניב.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,T,T))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="וריאציות" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> וריאציות</h2>
-<p>ניתן לכלול יותר מתנאי אחד בשאילתת
-ifelse,
-למשל אני רוצה לחלק את הקלטים המספריים שלי באופן הבא:</p>
-<ul>
-<li>אם x זוגי וגדול מ 10, תדפיס ״ big-even"</li>
-<li>אם x שווה בדיוק ל 1 תדפיס ״the one and only"</li>
-<li>בכל מקרה אחר, תדפיס ״orrrr"</li>
-</ul>
-<p>ב
-R
-הפקידה הזאת תראה כך:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="תנאים.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> x <span class="sc">&gt;</span> <span class="dv">10</span>){</span>
-<span id="cb70-2"><a href="תנאים.html#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;big-even&quot;</span>)</span>
-<span id="cb70-3"><a href="תנאים.html#cb70-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">==</span> <span class="dv">1</span>){</span>
-<span id="cb70-4"><a href="תנאים.html#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;the one and only&quot;</span>)</span>
-<span id="cb70-5"><a href="תנאים.html#cb70-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
-<span id="cb70-6"><a href="תנאים.html#cb70-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;orrrr&quot;</span>)</span>
-<span id="cb70-7"><a href="תנאים.html#cb70-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;orrrr&quot;</code></pre>
-<p>באותה הדרך אנחנו יכולים להוסיף כמה תנאי שרק נראה, רק חשוב לשים לב שכותבים את הקוד בדיוק האותו האופן שכתבתי פה.</p>
-<div id="ifelse" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> ifelse</h3>
-<p>פקודה סופר שימושים ב
-R
-נקראת
-<code>ifelse</code>
-והיא משתמש ליצירת שאילתת תנאי על וקטור שלם.</p>
-<p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="תנאים.html#cb72-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
-<span id="cb72-2"><a href="תנאים.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
-<pre><code>##  [1]  14  69  87  53  99  84  80  52   7 100  61  92
-## [13]  58  44  11  43  60  30  78  22</code></pre>
-<p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
-<code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="תנאים.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
-<span id="cb74-2"><a href="תנאים.html#cb74-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;מה להחזיר עם המבחן מצליח&quot;</span>,</span>
-<span id="cb74-3"><a href="תנאים.html#cb74-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;מה להחזיר אם הוא לא מצליח&quot;</span></span>
-<span id="cb74-4"><a href="תנאים.html#cb74-4" aria-hidden="true" tabindex="-1"></a>       )</span></code></pre></div>
-<p>ודוגמא לעניננו בפועל:</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="תנאים.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb75-2"><a href="תנאים.html#cb75-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
-<span id="cb75-3"><a href="תנאים.html#cb75-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;why???&quot;
-##  [6] &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;  
-## [11] &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot;
-## [16] &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;</code></pre>
-<p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
+<div id="any" class="section level3" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> any</h3>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,T,F,F))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,F,F,F))</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+</div>
+<div id="character" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> character</h2>
+<p>בלה בלה בלה</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -347,8 +309,8 @@ R
           </div>
         </div>
       </div>
-<a href="סוגי-משתנים-אבני-הבניין-שלנו.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="לולאות.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="שימוש-ב-r-בתור-מחשבון.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="תנאים.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -379,7 +341,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/04-ifelse_conditions.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/edit/master/03-variable_types.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -387,7 +349,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/04-ifelse_conditions.Rmd",
+"link": "https://github.com/ophirbetser/intro_to_R_in_hebrew/blob/master/03-variable_types.Rmd",
 "text": null
 },
 "download": null,
