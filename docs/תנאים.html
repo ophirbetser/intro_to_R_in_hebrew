@@ -145,7 +145,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html"><i class="fa fa-check"></i><b>2</b> מה היא שפת R?</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html#יתרונות-וחסרונות-בשימוש-ב-r"><i class="fa fa-check"></i><b>2.1</b> יתרונות וחסרונות בשימוש ב R</a></li>
-<li class="chapter" data-level="2.2" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html#מדריך-התקנה"><i class="fa fa-check"></i><b>2.2</b> מדריך התקנה</a></li>
+<li class="chapter" data-level="2.2" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html#מדריך-התקנה"><i class="fa fa-check"></i><b>2.2</b> מדריך התקנה</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html#למשתמשי-וינדאוס"><i class="fa fa-check"></i><b>2.2.1</b> למשתמשי וינדאוס</a></li>
+<li class="chapter" data-level="2.2.2" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html#למשתמשי-macos"><i class="fa fa-check"></i><b>2.2.2</b> למשתמשי macos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="שימוש-ב-r-בתור-מחשבון.html"><a href="שימוש-ב-r-בתור-מחשבון.html"><i class="fa fa-check"></i><b>3</b> שימוש ב R בתור מחשבון</a>
 <ul>
@@ -330,7 +334,7 @@ R
 <p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="תנאים.html#cb72-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
 <span id="cb72-2"><a href="תנאים.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
-<pre><code>##  [1]  35  34  54   2  15 100  67  16  97  47  22  11  12  84  43  92  83  19  50  91</code></pre>
+<pre><code>##  [1] 94 91  9 46 60 26 73 27 54 12 14 63 50 98 92 97 37 72 29 33</code></pre>
 <p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
 <code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="תנאים.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
@@ -341,9 +345,8 @@ R
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="תנאים.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb75-2"><a href="תנאים.html#cb75-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
 <span id="cb75-3"><a href="תנאים.html#cb75-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot;
-## [10] &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;why???&quot;
-## [19] &quot;good&quot;   &quot;why???&quot;</code></pre>
+<pre><code>##  [1] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;  
+## [11] &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;why???&quot;</code></pre>
 <p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
 
 </div>

@@ -1,6 +1,12 @@
 # מה היא שפת R? 
 
-בלה בלה בלה
+שפת 
+R
+היא שפת תכנות פופאלרית לביצוע ניתוח סטטיסטים ואקדמים.
+ניתן לבצע בה משימות רבות הקשורות לעולם הזה, כמו בניית מודלי למידת מכונה, יצירת ויזאליזציות, כתיבת מאמרים, בניית אפליקציות רשת ועד הרבה דברים אחרים.
+
+R
+היא שפת קוד פתוח, וככזו, היא מתוחזקת על ידי מיליוני משתמשים ברחבי העולם אשר תורמים לפיתוח מתשמך שלה, ומרחיבים את היכולות שלה מידי יום!
 
 ## יתרונות וחסרונות בשימוש ב R
 
@@ -8,5 +14,11 @@
 
 ## מדריך התקנה
 
-בלה בלה בלה
+### למשתמשי וינדאוס
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NZxSA80lF1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+### למשתמשי macos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cCgiR1uwXzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
