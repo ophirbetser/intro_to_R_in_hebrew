@@ -16,9 +16,14 @@ R
 
 ### למשתמשי וינדאוס
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NZxSA80lF1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/NZxSA80lF1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
 
 
 ### למשתמשי macos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cCgiR1uwXzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/cCgiR1uwXzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
