@@ -344,7 +344,7 @@ R
 <p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
 <div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="תנאים.html#cb70-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
 <span id="cb70-2"><a href="תנאים.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
-<pre><code>##  [1] 63 54 17 14 19 85 51 52  6 15 70 68 87 27 22 60 13 24 36 30</code></pre>
+<pre><code>##  [1] 36 10 87 89 65 19 59 96 68 61 84 11 44 62 46 63 50 93 86 53</code></pre>
 <p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
 <code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="תנאים.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
@@ -355,8 +355,8 @@ R
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="תנאים.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb73-2"><a href="תנאים.html#cb73-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
 <span id="cb73-3"><a href="תנאים.html#cb73-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;why???&quot;
-## [11] &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;</code></pre>
+<pre><code>##  [1] &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot;
+## [19] &quot;good&quot;   &quot;why???&quot;</code></pre>
 <p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
 
 </div>

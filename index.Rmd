@@ -33,6 +33,13 @@ R
 אפשר ליצור איתי קשר דרך כתובת המייל
 ophir.betser@gmail.com
 
+---
+
+
+
+עידכון אחרון:
+`r lubridate::now()`
+
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
