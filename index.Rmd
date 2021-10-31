@@ -36,7 +36,6 @@ ophir.betser@gmail.com
 ---
 
 
-sdfsdfsdfsdf
 עידכון אחרון:
 `r lubridate::now()`
 
