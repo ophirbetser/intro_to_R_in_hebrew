@@ -319,7 +319,7 @@ R
 <div id="שונות" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> שונות</h3>
 <p><span class="math display">\[
-var(\vec x) = \sigma^2 = \frac{1}{n} \sum_{i = 1}^n (x_i - \bar x)^2
+var(\vec x) = \sigma^2 = \frac{1}{n-1} \sum_{i = 1}^n (x_i - \bar x)^2
 \]</span></p>
 <p>שונות של וקטור מוגדרת להיות ממוצע סכומי המרחק מהממוצע בריבוע. נשמע מעט מורכב, אך ניתן לפרק את החישוב למספר פעולות פשוטות יותר, והמורכבות תעלם.</p>
 <p>ראשית לשמור את הממוצע של
@@ -333,9 +333,9 @@ v_bar</p>
 <p>ונעלה את כל אחד מהמרחקים בריבוע</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb34-1" aria-hidden="true" tabindex="-1"></a>(v <span class="sc">-</span> v_bar)<span class="sc">**</span><span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1]  9 16 25  1 16 16 16  1</code></pre>
-<p>כעת, כל שנותר הוא לסכום את ריבועי המרחקים, ולחלק את הסכום באורך הוקטור</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>((v <span class="sc">-</span> v_bar)<span class="sc">**</span><span class="dv">2</span>) <span class="sc">/</span> <span class="fu">length</span>(v)</span></code></pre></div>
-<pre><code>## [1] 12.5</code></pre>
+<p>כעת, כל שנותר הוא לסכום את ריבועי המרחקים, ולחלק את הסכום באורך הוקטור פחות 1</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>((v <span class="sc">-</span> v_bar)<span class="sc">**</span><span class="dv">2</span>) <span class="sc">/</span> (<span class="fu">length</span>(v) <span class="sc">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 14.28571</code></pre>
 <p>אך החישוב המיגע יכול היה להחסוך, כי גם לחישוב השונות קיימת פונקציה מובנת ב
 R</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span></code></pre></div>
@@ -346,7 +346,7 @@ R</p>
 <p>סטטית תקן מוגדרת להיות שורש השונות</p>
 <p><span class="math display">\[
 sd(\vec x) = \sigma_{\vec x} =
-\sqrt{ \frac{1}{n} \sum_{i = 1}^n (x_i - \bar x)^2 } = 
+\sqrt{ \frac{1}{n-1} \sum_{i = 1}^n (x_i - \bar x)^2 } = 
 \sqrt{var(\vec x)}
 \]</span></p>
 </div>
@@ -377,7 +377,44 @@ R
 </div>
 <div id="קצת-לינארית" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> קצת לינארית</h2>
-<p>בלה בלה בלה</p>
+<p>נגדיר 2 מטריצות
+במימדים 6 על 6</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb42-1" aria-hidden="true" tabindex="-1"></a>mat_1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">36</span>, <span class="dv">6</span>, <span class="dv">6</span>)</span>
+<span id="cb42-2"><a href="שימוש-ב-r-בתור-מחשבון.html#cb42-2" aria-hidden="true" tabindex="-1"></a>mat_1</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    1    7   13   19   25   31
+## [2,]    2    8   14   20   26   32
+## [3,]    3    9   15   21   27   33
+## [4,]    4   10   16   22   28   34
+## [5,]    5   11   17   23   29   35
+## [6,]    6   12   18   24   30   36</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb44-1" aria-hidden="true" tabindex="-1"></a>mat_2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">10</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">36</span>, <span class="dv">6</span>, <span class="dv">6</span>)</span>
+<span id="cb44-2"><a href="שימוש-ב-r-בתור-מחשבון.html#cb44-2" aria-hidden="true" tabindex="-1"></a>mat_2</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]   11   17   23   29   35   41
+## [2,]   12   18   24   30   36   42
+## [3,]   13   19   25   31   37   43
+## [4,]   14   20   26   32   38   44
+## [5,]   15   21   27   33   39   45
+## [6,]   16   22   28   34   40   46</code></pre>
+<p>נבצע חיבור מטריצות</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb46-1" aria-hidden="true" tabindex="-1"></a>mat_1 <span class="sc">+</span> mat_2</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]   12   24   36   48   60   72
+## [2,]   14   26   38   50   62   74
+## [3,]   16   28   40   52   64   76
+## [4,]   18   30   42   54   66   78
+## [5,]   20   32   44   56   68   80
+## [6,]   22   34   46   58   70   82</code></pre>
+<p>וכפל מטריצות</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="שימוש-ב-r-בתור-מחשבון.html#cb48-1" aria-hidden="true" tabindex="-1"></a>mat_1 <span class="sc">%*%</span> mat_2</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,] 1401 1977 2553 3129 3705 4281
+## [2,] 1482 2094 2706 3318 3930 4542
+## [3,] 1563 2211 2859 3507 4155 4803
+## [4,] 1644 2328 3012 3696 4380 5064
+## [5,] 1725 2445 3165 3885 4605 5325
+## [6,] 1806 2562 3318 4074 4830 5586</code></pre>
 
 </div>
 </div>

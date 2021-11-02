@@ -252,9 +252,9 @@ R
 אשר יבצעו עוד ועוד חזרות, עד אשר תנאי שנגדיר יתקיים.</p>
 <div id="for-loops" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> for loops</h2>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="לולאות.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
-<span id="cb75-2"><a href="לולאות.html#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb75-3"><a href="לולאות.html#cb75-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="לולאות.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb83-2"><a href="לולאות.html#cb83-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb83-3"><a href="לולאות.html#cb83-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
@@ -268,26 +268,34 @@ R
 </div>
 <div id="while" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> while</h2>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="לולאות.html#cb77-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb77-2"><a href="לולאות.html#cb77-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb77-3"><a href="לולאות.html#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(i <span class="sc">&lt;</span> n){</span>
-<span id="cb77-4"><a href="לולאות.html#cb77-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb77-5"><a href="לולאות.html#cb77-5" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb77-6"><a href="לולאות.html#cb77-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>ללאות
+while
+יתבצעו כל עוד התנאי שבסוגריים העגולים שלהן יחזיר ערך אמת.</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="לולאות.html#cb85-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">8</span></span>
+<span id="cb85-2"><a href="לולאות.html#cb85-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb85-3"><a href="לולאות.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(i <span class="sc">&lt;</span> n){</span>
+<span id="cb85-4"><a href="לולאות.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb85-5"><a href="לולאות.html#cb85-5" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb85-6"><a href="לולאות.html#cb85-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
 ## [1] 4
 ## [1] 5
 ## [1] 6
-## [1] 7
-## [1] 8
-## [1] 9</code></pre>
+## [1] 7</code></pre>
+<p>כאשר אתם משתמשים בלולאות
+while
+תודאו שיש תנאי עצירה!
+אם לא יהיה בתוך הלולאה שום שלב אשר יישנה את התנאי לשקר הלולאה תמשיך לרוץ באופן בלתי פוסק ולא תוכלו להמשיך להריץ קוד עד שתעצרו ידנית את התוכנה.</p>
 </div>
 <div id="apply" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> apply</h2>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="לולאות.html#cb79-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">4</span>)</span>
-<span id="cb79-2"><a href="לולאות.html#cb79-2" aria-hidden="true" tabindex="-1"></a>matrix</span></code></pre></div>
+<p>פונציות
+apply
+מאפשר לבצע ללואה על טבלת נתונים, רשימה ומטריצות</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="לולאות.html#cb87-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">4</span>)</span>
+<span id="cb87-2"><a href="לולאות.html#cb87-2" aria-hidden="true" tabindex="-1"></a>matrix</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4]
 ## [1,]    1    7   13   19
 ## [2,]    2    8   14   20
@@ -295,9 +303,11 @@ R
 ## [4,]    4   10   16   22
 ## [5,]    5   11   17   23
 ## [6,]    6   12   18   24</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="לולאות.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">1</span>, sum)</span></code></pre></div>
+<p>“תבצע סכימה לשורות המטריצה”</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="לולאות.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">1</span>, sum)</span></code></pre></div>
 <pre><code>## [1] 40 44 48 52 56 60</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="לולאות.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">2</span>, sum)</span></code></pre></div>
+<p>“תבצע סכימה לעמודות המטריצה”</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="לולאות.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">2</span>, sum)</span></code></pre></div>
 <pre><code>## [1]  21  57  93 129</code></pre>
 
 </div>

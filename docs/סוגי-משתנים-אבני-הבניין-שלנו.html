@@ -255,9 +255,9 @@ R
 <p>לדוגמא, אפשר לחבר אוביקט מספרי לאוביקט מספרי אחר, אך אין משמעות לחיבור של אוביקט מספרי ומחרוזת. כדי לברר לאיזה
 מחלקה כל אוביקט משוייך, אנחנו יכולים להשתמש בפונקציה
 <code>class</code></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;1&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <p>אכתוב עכשיו על סוגי המשתנים הבסיסים ביותר שיש בשפת
 R
@@ -280,12 +280,12 @@ R
 R
 בתור מחשבון.
 אך יש לשים לב שאם נבצע פעולה שתשנה את וקטור המספרים השלמים שלנו למספרים שיש להם מקודה עשרונית - סוג המשתנה ישונה גם הוא</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb46-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 9L, 9L, 6L)</span>
-<span id="cb46-2"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(v)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb54-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 9L, 9L, 6L)</span>
+<span id="cb54-2"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(v)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(v <span class="sc">/</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(v <span class="sc">/</span> <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 0.5 4.5 4.5 3.0</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(v <span class="sc">/</span> <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(v <span class="sc">/</span> <span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="numeric" class="section level2" number="4.3">
@@ -308,16 +308,16 @@ numeric
 </div>
 <div id="all" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> all</h3>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,F,T))</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,F,T))</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,T,T))</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,T,T))</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 </div>
 <div id="any" class="section level3" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> any</h3>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,T,F,F))</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,T,F,F))</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,F,F,F))</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,F,F,F))</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 </div>
 </div>
